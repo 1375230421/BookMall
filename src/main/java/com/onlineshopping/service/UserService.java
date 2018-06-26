@@ -10,4 +10,5 @@ public interface UserService {
 	public User userLogin(User user);					//登入
 	public boolean addRegisterInfo(User user) throws Exception;		//增加注册信息
 	
+	public int updateInfo(User user);
 }

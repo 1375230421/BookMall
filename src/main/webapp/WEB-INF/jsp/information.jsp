@@ -74,6 +74,7 @@
 				<div class="main-wrap">
 
 					<div class="user-info">
+					<form action="${pageContext.request.contextPath}/updateInfo" method="post" enctype="multipart/form-data">
 						<!--标题 -->
 						<div class="am-cf am-padding">
 							<div class="am-fl am-cf"><strong class="am-text-danger am-text-lg">个人资料</strong> / <small>Personal&nbsp;information</small></div>
@@ -84,7 +85,7 @@
 						<div class="user-infoPic">
 
 							<div class="filePic">
-								<input type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*">
+								<input name="uImage" type="file" class="inputPic" allowexts="gif,jpeg,jpg,png,bmp" accept="image/*">
 								<img class="am-circle am-img-thumbnail" src="${pageContext.request.contextPath}/public/two/images/getAvatar.do.jpg" alt="" />
 							</div>
 
@@ -100,14 +101,14 @@
 
 						<!--个人信息 -->
 						<div class="info-main">
-							<form class="am-form am-form-horizontal">
+							<div class="am-form am-form-horizontal">
 
 								
 
 								<div class="am-form-group">
 									<label for="user-name" class="am-form-label">姓名</label>
 									<div class="am-form-content">
-										<input type="text" id="user-name2" placeholder="name">
+										<input name="uName" type="text" id="user-name2" placeholder="name">
                                          
 									</div>
 								</div>
@@ -116,13 +117,13 @@
 									<label class="am-form-label">性别</label>
 									<div class="am-form-content sex">
 										<label class="am-radio-inline">
-											<input type="radio" name="radio10" value="male" data-am-ucheck> 男
+											<input name="uSex" type="radio" name="radio10" value="male" data-am-ucheck> 男
 										</label>
 										<label class="am-radio-inline">
-											<input type="radio" name="radio10" value="female" data-am-ucheck> 女
+											<input name="uSex" type="radio" name="radio10" value="female" data-am-ucheck> 女
 										</label>
 										<label class="am-radio-inline">
-											<input type="radio" name="radio10" value="secret" data-am-ucheck> 保密
+											<input name="uSex" type="radio" name="radio10" value="secret" data-am-ucheck> 保密
 										</label>
 									</div>
 								</div>
@@ -131,22 +132,22 @@
 									<label for="user-birth" class="am-form-label">生日</label>
 									<div class="am-form-content birth">
 										<div class="birth-select">
-											<select data-am-selected>
-												<option value="a">2015</option>
-												<option value="b">1987</option>
+											<select name="nian" data-am-selected>
+												<option value="2015">2015</option>
+												<option value="1987">1987</option>
 											</select>
 											<em>年</em>
 										</div>
 										<div class="birth-select2">
-											<select data-am-selected>
-												<option value="a">12</option>
-												<option value="b">8</option>
+											<select name="yue" data-am-selected>
+												<option value="12">12</option>
+												<option value="8">8</option>
 											</select>
 											<em>月</em></div>
 										<div class="birth-select2">
-											<select data-am-selected>
-												<option value="a">21</option>
-												<option value="b">23</option>
+											<select name="ri" data-am-selected>
+												<option value="21">21</option>
+												<option value="23">23</option>
 											</select>
 											<em>日</em></div>
 									</div>
@@ -180,12 +181,12 @@
 									</div>
 								</div>
 								<div class="info-btn">
-									<div class="am-btn am-btn-danger">保存修改</div>
+									<button type="submit" class="am-btn am-btn-danger">保存修改</button>
 								</div>
 
-							</form>
+							</div>
 						</div>
-
+						</form>
 					</div>
 
 				</div>

@@ -22,34 +22,36 @@ import com.onlineshopping.util.MD;
 public class UserController {
 	@Autowired
 	UserService userService;
+
 	@ResponseBody
-   @RequestMapping(value ="userlogin")
-	/*登入*/
-   public String login (HttpServletRequest request,User user){
-		String aa=MD.MD5(user.getuPwd());
+	@RequestMapping(value = "userlogin")
+	/* 登入 */
+	public String login(HttpServletRequest request, User user) {
+		String aa = MD.MD5(user.getuPwd());
 		user.setuPwd(aa);
-		User users=userService.userLogin(user);
-	    if(users != null){
-			 request.getSession().setAttribute("uName", users.getuName());
-			 return "true";
+		User users = userService.userLogin(user);
+		if (users != null) {
+			request.getSession().setAttribute("uName", users.getuName());
+			return "true";
 		}
-	return "false";
-   }
-	@RequestMapping(value ="addRegisterInfo")
-	   @ResponseBody
-	   /* 登入检验*/
-	   public boolean addRegisterInfo (@RequestBody User user){
-		   boolean bool=false;
-		   System.out.println(user.uPpwd);
-		   String aa=MD.MD5(user.getuPwd());
-		   user.setuPwd(aa);
-		   try {
-			   bool = userService.addRegisterInfo(user);
-		   } catch (Exception e) {
-			   System.out.println("已经有相同的用户名");
-			   e.printStackTrace();
-		   }
-		   	   return bool;
-	   	   }
-	   
+		return "false";
+	}
+
+	@RequestMapping(value = "addRegisterInfo")
+	@ResponseBody
+	/* 登入检验 */
+	public boolean addRegisterInfo(HttpServletRequest request, @RequestBody User user) {
+		boolean bool = false;
+		System.out.println(user.uPpwd);
+		String aa = MD.MD5(user.getuPwd());
+		user.setuPwd(aa);
+		try {
+			bool = userService.addRegisterInfo(user);
+		} catch (Exception e) {
+			System.out.println("已经有相同的用户名");
+			e.printStackTrace();
+		}
+		return bool;
+	}
+
 }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+<beans:beans
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
                         http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
                         http://www.springframework.org/schema/beans 
@@ -13,16 +17,28 @@
                      http://www.springframework.org/schema/aop/spring-aop.xsd  
                         http://www.springframework.org/schema/context 
                         http://www.springframework.org/schema/context/spring-context-3.0.xsd ">
-                  	<context:component-scan base-package="com.onlineshopping.controller"/>
+	<context:component-scan
+		base-package="com.onlineshopping.controller" />
+		
+		
+	    <!-- 文件上传相关 -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		
+		<!-- 文件上传编码格式 -->
+		<beans:property name="defaultEncoding" value="UTF-8"/>
+		<!-- 文件最大100M（单位是字节） -->
+		<beans:property name="maxInMemorySize" value="104857600"/>
+	</beans:bean>
 
- 
-    <mvc:annotation-driven/>
-        <!-- 用这个来解决静态资源问题 -->
-   
-<mvc:resources mapping="/public/**" location="/public/" />
-   <mvc:default-servlet-handler/>
-    <beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-    <beans:property name="prefix" value="/WEB-INF/jsp/"></beans:property>
+	<mvc:annotation-driven />
+	<!-- 用这个来解决静态资源问题 -->
+
+
+	<mvc:resources mapping="/public/**" location="/public/" />
+	<mvc:default-servlet-handler />
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/jsp/"></beans:property>
 		<beans:property name="suffix" value=".jsp"></beans:property>
-    </beans:bean>      
-                        </beans:beans>
+	</beans:bean>
+</beans:beans>

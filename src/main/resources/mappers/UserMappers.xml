@@ -28,4 +28,8 @@
 	  <select id="getGoodsNum"  resultType="int">
 		    select count(*) from goods
 	  </select>
+	  <update id="updateInfo" parameterType="user">
+	  	UPDATE users SET uSex=#{uSex},uBirth=#{uBirth},uImage=#{uImage} 
+		where uName=#{uName}
+	  </update>
   </mapper>
