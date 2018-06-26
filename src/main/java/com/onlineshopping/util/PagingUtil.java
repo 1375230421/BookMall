@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.onlineshopping.po.UserNum;
 
-/* 分页的工具类，传入多少个，和每页分多少个*/
+/* 分页的工具类，传入一共多少个，和每页分多少个*/
 public class PagingUtil {
 	public List<UserNum> getNum(int num,int limit){
 		num=(num+limit)/limit;
@@ -17,4 +17,5 @@ public class PagingUtil {
 		}
 		return listNum;	
 	}
+	
 }

@@ -17,7 +17,7 @@
 			 var uPpwd=$("#uPpwd").val();
 			 var uPpwdRepeat=$("#uPpwdRepeat").val();
 			 alert(uPpwdRepeat+uPpwd);
-			 if(email==""||phone==""||username==""||password==""||passwordRepeat==""||uPpwd="")
+			 if(email==""||phone==""||username==""||password==""||passwordRepeat==""||uPpwd=="")
 				 alert("请输入完整的信息");
 			 else if(!emailreg.test(email)){
 				 alert("非法的电子邮件!");

@@ -41,7 +41,7 @@
 					<div class="menu-hd"><a id="mc-menu-hd" href="${pageContext.request.contextPath}/pay" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
 				</div>
 				<div class="topMessage favorite">
-					<div class="menu-hd"><a href="#" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
+					<div class="menu-hd"><a href="${pageContext.request.contextPath}/collection" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>收藏夹</span></a></div>
 			</ul>
 			</div>
 
@@ -85,21 +85,21 @@
 									<dl id="select1">
 										<dt class="am-badge am-round">分类</dt>	
 										 <div class="dd-conent">										
-											<dd class="select-all selected"><a href="#">全部</a></dd>
-											<dd><a href="#">社科</a></dd>
-											<dd><a href="#">文艺</a></dd>
-											<dd><a href="#">经济 </a></dd>
-											<dd><a href="#">法律 </a></dd>
-											<dd><a href="#">古籍 </a></dd>
-											<dd><a href="#">艺术 </a></dd>
-											<dd><a href="#">科技  </a></dd>
-											<dd><a href="#">IT</a></dd>
-											<dd><a href="#">生活 </a></dd>
-											<dd><a href="#">建筑  </a></dd>
-											<dd><a href="#">少儿 </a></dd>
-											<dd><a href="#">教辅 </a></dd>
-											<dd><a href="#">外文  </a></dd>
-											<dd><a href="#">杂志  </a></dd>	
+											<dd class="select-all selected"><a href="${pageContext.request.contextPath}/commodityInformation?li=1">全部</a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=1">社科</a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=2">文艺</a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=3">经济 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=4">法律 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=5">古籍 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=6">艺术 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=7">科技  </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=8">IT</a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=9">生活 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=10">建筑  </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=11">少儿 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=12">教辅 </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=13">外文  </a></dd>
+											<dd><a href="${pageContext.request.contextPath}/homeType?tID=14">杂志  </a></dd>	
 										 </div>
 						
 									</dl>
@@ -196,7 +196,7 @@
 							</div>
 							<div class="login_btnbox">
 								<a href="#" class="login_order">我的订单</a>
-								<a href="#" class="login_favorite">我的收藏</a>
+								<a href="${pageContext.request.contextPath}/collection" class="login_favorite">我的收藏</a>
 							</div>
 							<i class="icon_arrow_white"></i>
 						</div>
@@ -216,7 +216,7 @@
 					
 
 					<div id="brand" class="item">
-						<a href="#">
+						<a href="${pageContext.request.contextPath}/collection">
 							<span class="wdsc"><img src="${pageContext.request.contextPath}/public/two/images/wdsc.png" /></span>
 						</a>
 						<div class="mp_tooltip">

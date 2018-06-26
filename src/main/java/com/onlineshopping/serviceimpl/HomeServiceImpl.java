@@ -28,5 +28,12 @@ public class HomeServiceImpl implements HomeService{
 		List<UserNum>listNum=util.getNum(num, 8);
 		return listNum;
 	}
+	//根据类别查询商品
+	public List<Goods> findGoodsByTId(int tID, int li) {
+		System.out.println(tID+"tid"+li+"     li+li2222222222222222222222222222");
+		li=(li-1)*8;
+		List<Goods> list=homeMapper.findGoodsByTId(tID, li);
+		return list;
+	}
 
 }
