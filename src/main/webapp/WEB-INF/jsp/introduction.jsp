@@ -38,10 +38,10 @@
 			</ul>
 			<ul class="message-r">
 				<div class="topMessage home">
-					<div class="menu-hd"><a href="#" target="_top" class="h">商城首页</a></div>
+					<div class="menu-hd"><a href="${pageContext.request.contextPath}/commodityInformation?li=1" target="_top" class="h">商城首页</a></div>
 				</div>
 				<div class="topMessage my-shangcheng">
-					<div class="menu-hd MyShangcheng"><a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					<div class="menu-hd MyShangcheng"><a href="${pageContext.request.contextPath}/information" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
 				</div>
 				<div class="topMessage mini-cart">
 					<div class="menu-hd"><a id="mc-menu-hd" href="#" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">0</strong></a></div>
@@ -101,13 +101,13 @@
 						<div class="flexslider">
 							<ul class="slides">
 								<li>
-									<img src="../images/01.jpg" title="pic" />
+									<img src="${pageContext.request.contextPath}/public/two/images/01.jpg" title="pic" />
 								</li>
 								<li>
-									<img src="../images/02.jpg" />
+									<img src="${pageContext.request.contextPath}/public/two/images/02.jpg" />
 								</li>
 								<li>
-									<img src="../images/03.jpg" />
+									<img src="${pageContext.request.contextPath}/public/two/images/03.jpg" />
 								</li>
 							</ul>
 						</div>
