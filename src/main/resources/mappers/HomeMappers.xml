@@ -11,4 +11,8 @@
 	  <select id="getGoodsNum"  resultType="int">
 		    select count(*) from goods
 	  </select>
+	  <!-- 根据类别分页查询商品 -->
+	  <select id="findGoodsByTId"  parameterType="int" resultType="goods">
+      		select * from goods where tID=#{0} order by gdSaleQty desc limit #{1},8
+	  </select>
 </mapper>

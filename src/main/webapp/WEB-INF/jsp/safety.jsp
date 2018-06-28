@@ -9,11 +9,11 @@
 
 		<title>安全设置</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/infstyle.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/css/infstyle.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
@@ -50,7 +50,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${pageContext.request.contextPath}/public/two/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">

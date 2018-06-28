@@ -9,13 +9,13 @@
 
 		<title>地址管理</title>
 
-		<link href="../AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
-		<link href="../AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css">
 
-		<link href="../css/personal.css" rel="stylesheet" type="text/css">
-		<link href="../css/addstyle.css" rel="stylesheet" type="text/css">
-		<script src="../AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
-		<script src="../AmazeUI-2.4.2/assets/js/amazeui.js"></script>
+		<link href="${pageContext.request.contextPath}/public/two/css/personal.css" rel="stylesheet" type="text/css">
+		<link href="${pageContext.request.contextPath}/public/two/css/addstyle.css" rel="stylesheet" type="text/css">
+		<script src="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/js/jquery.min.js" type="text/javascript"></script>
+		<script src="${pageContext.request.contextPath}/public/two/AmazeUI-2.4.2/assets/js/amazeui.js"></script>
 
 	</head>
 
@@ -53,7 +53,7 @@
 
 						<div class="nav white">
 							<div class="logoBig">
-								<li><img src="../images/logobig.png" /></li>
+								<li><img src="${pageContext.request.contextPath}/public/two/images/logobig.png" /></li>
 							</div>
 
 							<div class="search-bar pr">

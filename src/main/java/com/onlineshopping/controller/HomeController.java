@@ -32,4 +32,22 @@ public class HomeController {
 		   request.setAttribute("list", list);						/*list为锟斤拷品锟斤拷锟斤拷锟斤拷前锟斤拷*/
 		   return "home";   
 	   }
+	   //根据书籍类别显示
+	   @RequestMapping(value="homeType")
+	   public String homeType(HttpServletRequest request,Integer tID,Integer li){
+		   System.out.println("11111111111111111111111111");
+		   List<UserNum> listNum=homeService.getGoodsNum();			/*查询有多少页*/
+		   System.out.println(listNum+"22222222222222");
+		   request.setAttribute("listNum",listNum);					/*listnum一共有多少页，为现在为2页，传给jsp页面*/			
+		   if(li==null){
+			   li=1;
+		   }
+		   System.out.println(li+"     111111111111111111111111");
+		   System.out.println(li+"     tid");
+		   request.setAttribute("li", li);							/*li为多少页如果第一次进入为空*/
+		   List<Goods> list=homeService.findGoodsByTId(tID, li);/*分页查询*/
+		   System.out.println(list);
+		   request.setAttribute("list", list);
+		   return "home";
+	   }
 }
