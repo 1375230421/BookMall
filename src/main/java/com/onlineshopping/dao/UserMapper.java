@@ -9,4 +9,5 @@ public interface UserMapper {
 	public User findUser(User user);
 	public boolean addRegisterInfo(User user);		//增加注册信息
 	
+	public int updateInfo(User user);
 }

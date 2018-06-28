@@ -17,20 +17,25 @@ import com.onlineshopping.service.UserService;
 import com.onlineshopping.util.PagingUtil;
 
 @Service
-public class UserServiceImpl implements UserService{
-         @Autowired
-         UserMapper userMapper;
-         
-		public User userLogin(User user) {
-			User users= userMapper.findUser(user);
-			return users;
-		}
-		
-		//增加注册信息
-				public boolean addRegisterInfo(User user)throws Exception {
-					user.setuRegTiem(new Date());
-					boolean bool=userMapper.addRegisterInfo(user);
-					return bool;
-				}
+public class UserServiceImpl implements UserService {
+	@Autowired
+	UserMapper userMapper;
+
+	public User userLogin(User user) {
+		User users = userMapper.findUser(user);
+		return users;
+	}
+
+	// 增加注册信息
+	public boolean addRegisterInfo(User user) throws Exception {
+		user.setuRegTiem(new Date());
+		boolean bool = userMapper.addRegisterInfo(user);
+		return bool;
+	}
+
+	@Override
+	public int updateInfo(User user) {
+		return userMapper.updateInfo(user);
+	}
 
 }
